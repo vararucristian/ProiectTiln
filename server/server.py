@@ -5,7 +5,6 @@ import re
 import math
 
 app = Flask(__name__)
-
 data= open("../Eugenia.txt", encoding="utf8")
 text=data.read()
 
@@ -78,3 +77,6 @@ def return_quote():
             mimimum_long=long
             mimimum=get_distance(lat, long, latitude, longitude)
     return find_quote_by_location(mimimum_lat, mimimum_long)
+
+
+app.run(host = '192.168.1.91')

@@ -20,12 +20,12 @@ def  get_possible_coordinates():
 coordinates = get_possible_coordinates()
 
 def find_location(lat, long):
-    tag= '\<location[^\>]*latitude='+str(lat)+"[^\>]*longitude="+str(long)+'[^\>]*\>[^\>]*\</location\>'
+    tag= '\<location[^\>]*latitude=[\s]*'+str(lat)+"[^\>]*longitude=[\s]*"+str(long)+'[^\>]*\>[^\>]*\</location\>'
     result =  re.findall('[.?!(...)]\s*[A-Z][^\.\?\!]*'+tag+'[^\.\?\!]*[.?!(...)]', text)
-    r=""
-    for ex in result:
-        r=r+ex[1:]+"++++"
-    return r
+    if result:
+        return random.choice(result)
+    else:
+        return str(lat)+str(long)
 
 #functe care calculeaza distanta in km
 def get_distance(lat1, lon1, lat2, lon2):

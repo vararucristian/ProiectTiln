@@ -5,7 +5,6 @@ import re
 import math
 
 app = Flask(__name__)
-
 data= open("../Eugenia.txt", encoding="utf8")
 text=data.read()
 
@@ -57,3 +56,6 @@ def return_quote():
         if get_distance(lat, long, latitude, longitude) <= radius:
             quotes.append(find_location(lat, long))
     return random.choice(quotes)
+
+
+app.run(host = '192.168.1.91')

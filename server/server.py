@@ -20,13 +20,30 @@ def  get_possible_coordinates():
 
 coordinates = get_possible_coordinates()
 
-def find_location(lat, long):
-    tag= '\<location[^\>]*latitude=[\s]*'+str(lat)+"[^\>]*longitude=[\s]*"+str(long)+'[^\>]*\>[^\>]*\</location\>'
-    result =  re.findall('[.?!(...)]\s*[A-Z][^\.\?\!]*'+tag+'[^\.\?\!]*[.?!(...)]', text)
+
+def find_quote_by_name(name):
+    result=list()
+    finds= re.findall("[.?!]\s*[A-ZÎ][^.?!]*"+name+"[^.?!]*[.?!]", re.sub("\<[^\>]*\>", "", text))
+    for find in finds:
+        #sentence=find
+        #while len(sentence)<250:
+         #   sentence=re.search(sentence+"\s*[A-ZÎ][^.?!]*[.?!]", re.sub("\<[^\>]*\>", "", text)).group(0)
+        result.append(find[2:])
+    return result
+
+def find_quote_by_location(lat, long):
+    tag= '\<location[^\>]*latitude[\s]*=[\s]*'+str(lat)+"[0]*[^\>]*longitude[\s]*=[\s]*"+str(long)+'[0]*[^\>]*\>[^\<]*\</location\>'
+    names =  re.findall(tag, text)
+    result=list()
+    for name in names:
+        quotes=find_quote_by_name(re.sub("\<[^\>]*\>", "", name))
+        for quote in quotes:
+            if quote not in result:
+                result.append(quote)
     if result:
         return random.choice(result)
     else:
-        return str(lat)+str(long)
+        return "Nu s-a returnat nici un citat."
 
 #functe care calculeaza distanta in km
 def get_distance(lat1, lon1, lat2, lon2):
@@ -52,8 +69,12 @@ def return_quote():
     latitude = float(request.args.get('latitude'))
     longitude = float(request.args.get('longitude'))
     radius = int(request.args.get('radius'))
-    quotes=list()
+    mimimum=radius
+    mimimum_lat=0
+    mimimum_long=0
     for lat, long in coordinates:
-        if get_distance(lat, long, latitude, longitude) <= radius:
-            quotes.append(find_location(lat, long))
-    return random.choice(quotes)
+        if get_distance(lat, long, latitude, longitude) <= mimimum :
+            mimimum_lat=lat
+            mimimum_long=long
+            mimimum=get_distance(lat, long, latitude, longitude)
+    return find_quote_by_location(mimimum_lat, mimimum_long)

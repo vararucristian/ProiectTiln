@@ -1,5 +1,6 @@
 package com.example.androidaplication;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -9,9 +10,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class SpeechDataHandler extends AsyncTask<Void, Void, String> {
+public class SpeechDataHandler extends AsyncTask<MapsActivity, Void, String> {
     @Override
-    protected String doInBackground(Void... voids) {
+    protected String doInBackground(MapsActivity... activity) {
         StringBuffer content = new StringBuffer();
         try {
             String urlAddress ="http://192.168.1.91:5000/quotes?latitude=47.165413&longitude=27.580620&radius=10";
@@ -29,8 +30,11 @@ public class SpeechDataHandler extends AsyncTask<Void, Void, String> {
             in.close();
 
         } catch (IOException e) {
-            Log.e("http",e.toString());
+            Log.e("my_http",e.toString());
         }
+        activity[0].setSpeechText(content.toString());
+        Log.i("toSpeech",content.toString());
+
         return content.toString();
     }
 }

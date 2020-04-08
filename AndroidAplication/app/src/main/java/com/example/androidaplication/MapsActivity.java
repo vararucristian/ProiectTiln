@@ -73,7 +73,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
-    private void speak(){
+    public void speak(){
         FlutterEngine flutterEngine = new FlutterEngine(this);
         flutterEngine.getDartExecutor().executeDartEntrypoint(
                 DartExecutor.DartEntrypoint.createDefault());
@@ -98,12 +98,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     new String[]{Manifest.permission.INTERNET},
                     1);
         }
-        new SpeechDataHandler().execute();
+        new SpeechDataHandler().execute(this);
         speak();
     }
 
     private String getSpeechText() {
         return this.SpeechText;
+    }
+
+    public void setSpeechText(String speechText) {
+        SpeechText = speechText;
     }
 
 

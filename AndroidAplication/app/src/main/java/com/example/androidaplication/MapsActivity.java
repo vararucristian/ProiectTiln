@@ -19,17 +19,31 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import io.flutter.embedding.android.FlutterActivity;
+import io.flutter.embedding.engine.FlutterEngine;
+import io.flutter.embedding.engine.FlutterEngineCache;
+import io.flutter.embedding.engine.dart.DartExecutor;
+import io.flutter.plugin.common.MethodCall;
+import io.flutter.plugin.common.MethodChannel;
+
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback , LocationListener {
 
     private GoogleMap mMap;
     private LocationManager locationManager;
     private double latitude;
     private double longitude;
+    private static final String PLATFORM_CHANNEL = "speechDataChannel";
+    private String SpeechText = "Ce mai faci tu Ana?";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+        FlutterEngine flutterEngine = new FlutterEngine(this);
+        flutterEngine.getDartExecutor().executeDartEntrypoint(
+                DartExecutor.DartEntrypoint.createDefault());
+        FlutterEngineCache.getInstance().put("my_engine_id",flutterEngine);
+        startActivity(FlutterActivity.withCachedEngine("my_engine_id").build(this));
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
 
@@ -48,9 +62,21 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
+
+        new MethodChannel(flutterEngine.getDartExecutor().getBinaryMessenger(), PLATFORM_CHANNEL).setMethodCallHandler(new MethodChannel.MethodCallHandler() {
+            @Override
+            public void onMethodCall(MethodCall call, MethodChannel.Result result) {
+                    if (call.method.equals("getSpeechText")){
+                        String speechText = getSpeechText();
+                        result.success(speechText);
+                    }
+            }
+        });
     }
 
-
+    private String getSpeechText() {
+        return this.SpeechText;
+    }
 
 
     @Override

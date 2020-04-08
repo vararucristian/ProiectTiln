@@ -1,2 +1,20 @@
 include ':app'
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../tts_flutter_module/.android/include_flutter.groovy'
+))
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../speech_module/.android/include_flutter.groovy'
+))
+setBinding(new Binding([gradle: this]))
+evaluate(new File(
+  settingsDir,
+  '../speech_module/.android/include_flutter.groovy'
+))
 rootProject.name='AndroidAplication'
+
+include ':speech_module'
+project(':speech_module').projectDir = new File('../speech_module')

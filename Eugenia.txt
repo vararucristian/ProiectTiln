@@ -387,8 +387,7 @@ spuneam întotdeauna evreilor care frecventau universitatea cu riscul
 de a încasa bătaie -, m-aş fi simţit insultată. De aceea, încerc să-mi
 amintesc de felul în care îi priveam pe evrei în anul 1935. Ne
 însuşiserăm ideea că erau profund diferiţi de noi: fie putred de bogaţi,
-precum fraţii Braunstein, care deţineau <location type=”historical building” 
-latitude=47.165413 longitude=27.580620 > palatul cu acelaşi nume din 
+precum fraţii Braunstein, care deţineau <location type=”historical building” latitude=47.165413 longitude=27.580620 > palatul cu acelaşi nume din 
 centrul oraşului,</location> sau ca familia Neuschotz, care făcea comerţ 
 în lumea întreagă; fie sărăci lipiţi pământului, precum cei care supravieţuiau în
 mahalale -  <location type=”neighborhood” latitude=47.211130 
@@ -1004,7 +1003,7 @@ Apoi, văzând că îi urmam, s-a întors spre mine:
 domnului Sebastian, dacă vrei. A, şi adu-mi şi mie lucrurile, paltonul
 şi geanta, da?
 
-O clipă mai târziu, îi regăseam în holul mare al <location type=”institution” universitatiilatitude=47.174144 longitude=27.572106>
+O clipă mai târziu, îi regăseam în holul mare al <location type=”institution” latitude=47.174144 longitude=27.572106>
  Universităţii </location>. El îşi tampona uşor buzele cu batista, iar sângele
  care îi curgea din păr fusese şters. Doamna Costinaş l-a ajutat să-şi pună
  paltonul, apoi şi l-a îmbrăcat şi ea şi am ieşit în stradă toţi trei.
@@ -1121,8 +1120,8 @@ Locuia pe una dintre străduţele acelea înguste, în pantă, mai sus de
 <location type=”institution” latitude=47.168794
  longitude=27.582644> Spitalul Sf. Spiridon </location>, foarte aproape 
 de <location type=”historical building” latitude=47.175310
- longitude= 27.582853> bojdeuca </location> scriitorului meu de
-suflet, Ion Creangă, în faţa căreia veneam uneori să mă aşez.
+ longitude= 27.582853> bojdeuca  scriitorului meu de
+suflet, Ion Creangă,</location> în faţa căreia veneam uneori să mă aşez.
 
 Nu m-am putut împiedica să nu-i spun.
 
@@ -1270,7 +1269,7 @@ nu vei lipsi de la cursuri.
 
 Făcuse propunerea cu atâta naturaleţe şi drăgălăşenie, încât m-am
 pomenit acceptând, de parcă nu era mai mult decât o invitaţie la o
-prăjitură la<location type=”historical building” latitude=47.168553
+prăjitură la <location type=”historical building” latitude=47.168553
  longitude=27.577790 >Tufli,</location> delicioasa cofetărie a Jockey Clubului.
 
 - Eugenia, ce mult mă bucur că te-am cunoscut! a conchis ea. Şi

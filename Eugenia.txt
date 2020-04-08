@@ -476,9 +476,8 @@ geam, foarte mulţi bătuţi, uneori până la pierderea cunoştinţei, pe
 holurile căminelor, actele lor de identitate fuseseră arse, cărţile
 aruncate pe fereastră.
 După aceea, profesorul Cuza ceruse ca un numerus clausus să le
-fie impus evreilor. În acord cu această propunere, colegul său de la
-<location type=”institution” latitude=47.169697
- longitude=27.585170>Facultatea de Medicină, </location> decanul 
+fie impus evreilor. În acord cu această propunere, colegul său de la <location type=”institution” latitude=47.169697 longitude=27.585170>Facultatea de 
+Medicină,</location> decanul 
 Constantin Bacaloglu, mersese şi mai
 departe şi decretase că, de atunci înainte, nici un student evreu nu mai
 putea diseca un cadavru de creştin. Studenţii evrei nu aveau decât să-
@@ -3110,8 +3109,7 @@ Copou </location> şi stricase mult din Vie (dar când nu era grindina, era
 Crivăţul care o strica). O nouă prăvălie de Vinuri şi spirtoase era pe
 punctul de a se deschide pe <location type=”street” latitude=47.162554 
 longitude=27.582693>  bulevardul Ştefan cel Mare</location>, dacă nu
-cumva era pe <location type=”street” latitude=47.164352 
-longitude= 27.585285> strada Cuza- Vodă</location> (dar în fiecare an, de la prima mea
+cumva era pe <location type=”street” latitude=47.164352 longitude= 27.585285> strada Cuza- Vodă</location> (dar în fiecare an, de la prima mea
 coardă de sărit, ne temeam de acest concurent, care până la urmă nu
 mai deschidea). Să văruim oare faţada la vară, sau să încercăm să mai
 rezistăm un an, din motive de economie? (Când Carmen voia să

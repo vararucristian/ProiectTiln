@@ -22,12 +22,17 @@ coordinates = get_possible_coordinates()
 
 def find_quote_by_name(name):
     result=list()
-    finds= re.findall("[.?!]\s*[A-ZÎ][^.?!]*"+name+"[^.?!]*[.?!]", re.sub("\<[^\>]*\>", "", text))
+    text_without_tags=re.sub("\<[^\>]*\>", " ", text)
+
+    finds= re.findall('[.?!]\s*[A-ZÎĂȚ„-][^.?!]*'+name+'[^.?!]*[.?!“]+', text_without_tags)
     for find in finds:
-        #sentence=find
-        #while len(sentence)<250:
-         #   sentence=re.search(sentence+"\s*[A-ZÎ][^.?!]*[.?!]", re.sub("\<[^\>]*\>", "", text)).group(0)
-        result.append(find[2:])
+        sentence=find[2:]
+        while len(sentence)<500:
+            try:
+                sentence=re.search(sentence+'\s*[A-ZÎŞĂȚ„-][^.?! ]*[.?!“]+', text_without_tags).group(0)
+            except:
+                break
+        result.append(sentence)
     return result
 
 def find_quote_by_location(lat, long):
@@ -35,7 +40,7 @@ def find_quote_by_location(lat, long):
     names =  re.findall(tag, text)
     result=list()
     for name in names:
-        quotes=find_quote_by_name(re.sub("\<[^\>]*\>", "", name))
+        quotes=find_quote_by_name(re.sub("\<[^\>]*\>", " ", name))
         for quote in quotes:
             if quote not in result:
                 result.append(quote)
@@ -79,4 +84,4 @@ def return_quote():
     return find_quote_by_location(mimimum_lat, mimimum_long)
 
 
-app.run(host = '192.168.1.91')
+app.run(host = '127.0.0.1')

@@ -84,4 +84,4 @@ def return_quote():
     return find_quote_by_location(mimimum_lat, mimimum_long)
 
 
-app.run(host = '127.0.0.1')
+app.run(host = '192.168.1.91')

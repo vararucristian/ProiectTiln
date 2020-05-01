@@ -29,6 +29,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.List;
 
 import io.flutter.embedding.android.FlutterActivity;
 import io.flutter.embedding.engine.FlutterEngine;
@@ -46,6 +47,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private static final String PLATFORM_CHANNEL = "speechDataChannel";
     private String SpeechText = "Ce mai faci tu Ana?";
     private Marker locationMarker;
+    private String textTitle = "Eugenia";
+    private String textAuthor = "Lionel Duroy";
+    private String textLocation = "Targu Cucu";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,16 +59,25 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
 
-        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_FINE_LOCATION},1);
-
         }
-        if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED)
+        {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},1);
-
         }
 
         Location location = locationManager.getLastKnownLocation(LocationManager.GPS_PROVIDER);
+        List<String> providers = locationManager.getProviders(true);
+        for (String provider : providers) {
+            location = locationManager.getLastKnownLocation(provider);
+            Log.i("provider",provider);
+            if (location != null) {
+                break;
+            }
+        }
+        Log.i("location",String.valueOf(location));
         this.latitude = location.getLatitude();
         this.longitude = location.getLongitude();
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -87,8 +101,33 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     String speechText = getSpeechText();
                     result.success(speechText);
                 }
+                if (call.method.equals("getTextTitle")){
+                    String textTitle = getTextTitle();
+                    Log.i("textTitle",textTitle);
+                    result.success(textTitle);
+                }
+                if (call.method.equals("getTextAuthor")){
+                    String textAuthor = getTextAuthor();
+                    result.success(textAuthor);
+                }
+                if (call.method.equals("getTextLocation")){
+                    String textLocation = getTextlocation();
+                    result.success(textLocation);
+                }
             }
         });
+    }
+
+    private String getTextlocation() {
+        return textLocation;
+    }
+
+    private String getTextAuthor() {
+        return textAuthor;
+    }
+
+    private String getTextTitle() {
+        return textTitle;
     }
 
     private void updateSpeachText(){

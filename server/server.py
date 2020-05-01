@@ -21,19 +21,24 @@ coordinates = get_possible_coordinates()
 
 
 def find_quote_by_name(name):
+    final_sentence=[".","?","!"]
     result=list()
     text_without_tags=re.sub("\<[^\>]*\>", " ", text)
-
-    finds= re.findall('[.?!]\s*[A-ZÎĂȚ„-][^.?!]*'+name+'[^.?!]*[.?!“]+', text_without_tags)
+    print("")
+    finds= re.findall('[.?!]\s*[A-ZÎĂȚȘ„-][^.?!]*'+name+'[^.?!]*[.?!“]+', text_without_tags)
     for find in finds:
         sentence=find[2:]
-        while len(sentence)<500:
-            try:
-                sentence=re.search(sentence+'\s*[A-ZÎŞĂȚ„-][^.?! ]*[.?!“]+', text_without_tags).group(0)
-            except:
-                break
-        result.append(sentence)
+        start_position = text_without_tags.find(sentence)
+        stop_position = start_position+500
+        while(text_without_tags[stop_position] not in final_sentence):
+            stop_position+=1
+        result.append(text_without_tags[start_position:stop_position+1])
     return result
+
+
+def get_title_author():
+
+
 
 def find_quote_by_location(lat, long):
     tag= '\<location[^\>]*latitude[\s]*=[\s]*'+str(lat)+"[0]*[^\>]*longitude[\s]*=[\s]*"+str(long)+'[0]*[^\>]*\>[^\<]*\</location\>'
@@ -73,7 +78,7 @@ def return_quote():
     latitude = float(request.args.get('latitude'))
     longitude = float(request.args.get('longitude'))
     radius = int(request.args.get('radius'))
-    mimimum=radius
+    mimimum=radius*0.001
     mimimum_lat=0
     mimimum_long=0
     for lat, long in coordinates:

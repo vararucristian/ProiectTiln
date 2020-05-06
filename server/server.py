@@ -1,4 +1,5 @@
 import random
+import json
 
 from flask import Flask, request
 import re
@@ -23,7 +24,7 @@ coordinates = get_possible_coordinates()
 def find_quote_by_name(name):
     final_sentence=[".","?","!"]
     result=list()
-    text_without_tags=re.sub("\<[^\>]*\>", " ", text)
+    text_without_tags=re.sub("latitude[\s]*=[^\>]*longitude[\s]*=[^\> ]*", " ", text)
     print("")
     finds= re.findall('[.?!]\s*[A-ZÎĂȚȘ„-][^.?!]*'+name+'[^.?!]*[.?!“]+', text_without_tags)
     for find in finds:
@@ -34,9 +35,6 @@ def find_quote_by_name(name):
             stop_position+=1
         result.append(text_without_tags[start_position:stop_position+1])
     return result
-
-
-def get_title_author():
 
 
 
@@ -75,6 +73,11 @@ def get_distance(lat1, lon1, lat2, lon2):
 
 @app.route('/quotes')
 def return_quote():
+    result=dict()
+    result["quote"]="-"
+    result["author"] = "-"
+    result["title"] = "-"
+    result["place"] = "-"
     latitude = float(request.args.get('latitude'))
     longitude = float(request.args.get('longitude'))
     radius = int(request.args.get('radius'))
@@ -86,7 +89,9 @@ def return_quote():
             mimimum_lat=lat
             mimimum_long=long
             mimimum=get_distance(lat, long, latitude, longitude)
-    return find_quote_by_location(mimimum_lat, mimimum_long)
+    result["quote"]=find_quote_by_location(mimimum_lat, mimimum_long).replace("\n", " ")
+    result=json.dumps(result, ensure_ascii=False).encode('utf8')
+    return result
 
 
-app.run(host = '192.168.1.91')
+app.run(host = '127.0.0.1')

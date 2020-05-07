@@ -36,7 +36,7 @@ def find_quote_by_name(name):
     return result
 
 
-def get_title_author():
+# def get_title_author():
 
 
 

@@ -1,4 +1,5 @@
 import random
+import json
 
 from flask import Flask, request
 import re
@@ -23,34 +24,35 @@ coordinates = get_possible_coordinates()
 def find_quote_by_name(name):
     final_sentence=[".","?","!"]
     result=list()
-    text_without_tags=re.sub("\<[^\>]*\>", " ", text)
-    print("")
-    finds= re.findall('[.?!]\s*[A-ZÎĂȚȘ„-][^.?!]*'+name+'[^.?!]*[.?!“]+', text_without_tags)
+    text_without_coord=re.sub("latitude[\s]*=[^\>]*longitude[\s]*=[^\> ]*", "", text)
+    finds= re.findall('[.?!]\s*[A-ZÎĂȚȘ„-][^.?!]*entity_name=\"'+name+'\"[^.?!]*[.?!“]+', text_without_coord)
+    print(name)
     for find in finds:
         sentence=find[2:]
-        start_position = text_without_tags.find(sentence)
-        stop_position = start_position+500
-        while(text_without_tags[stop_position] not in final_sentence):
+        start_position = text_without_coord.find(sentence)
+        stop_position = start_position+1000
+        while(text_without_coord[stop_position] not in final_sentence):
             stop_position+=1
-        result.append(text_without_tags[start_position:stop_position+1])
+        quote=text_without_coord[start_position:stop_position+1]
+        r = dict()
+        r["quote"]=re.sub("\<[^\>]*\>", "",quote)
+        r["author"]=re.findall('author=\"[^\"]*\"',quote)[0][8:-1]
+        r["title"]=re.findall('title=\"[^\"]*\"',quote)[0][7:-1]
+        r["place"]=name
+        result.append(r)
+    print (result)
     return result
-
-
-# def get_title_author():
 
 
 
 def find_quote_by_location(lat, long):
     tag= '\<location[^\>]*latitude[\s]*=[\s]*'+str(lat)+"[0]*[^\>]*longitude[\s]*=[\s]*"+str(long)+'[0]*[^\>]*\>[^\<]*\</location\>'
-    names =  re.findall(tag, text)
+    name =  re.findall(tag, text)[0]
     result=list()
-    for name in names:
-        quotes=find_quote_by_name(re.sub("\<[^\>]*\>", " ", name))
-        for quote in quotes:
-            if quote not in result:
-                result.append(quote)
-    if result:
-        return random.choice(result)
+    quotes=find_quote_by_name(re.findall('entity_name=\"[^\"]*\"', name)[0][13:-1])
+    if quotes:
+        print (quotes)
+        return random.choice(quotes)
     else:
         return "Nu s-a returnat nici un citat."
 
@@ -75,6 +77,11 @@ def get_distance(lat1, lon1, lat2, lon2):
 
 @app.route('/quotes')
 def return_quote():
+    result=dict()
+    result["quote"]="-"
+    result["author"] = "-"
+    result["title"] = "-"
+    result["place"] = "-"
     latitude = float(request.args.get('latitude'))
     longitude = float(request.args.get('longitude'))
     radius = int(request.args.get('radius'))
@@ -86,7 +93,13 @@ def return_quote():
             mimimum_lat=lat
             mimimum_long=long
             mimimum=get_distance(lat, long, latitude, longitude)
-    return find_quote_by_location(mimimum_lat, mimimum_long)
+    aux=find_quote_by_location(mimimum_lat, mimimum_long)
+    result["quote"]=aux["quote"].replace("\n", " ")
+    result["author"]=aux["author"].replace("\n", " ")
+    result["title"] = aux["title"].replace("\n", " ")
+    result["place"] = aux["place"].replace("\n", " ")
+    result=json.dumps(result, ensure_ascii=False).encode('utf8')
+    return result
 
 
 app.run(host = '192.168.1.91')

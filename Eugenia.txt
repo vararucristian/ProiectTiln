@@ -387,13 +387,13 @@ spuneam întotdeauna evreilor care frecventau universitatea cu riscul
 de a încasa bătaie -, m-aş fi simţit insultată. De aceea, încerc să-mi
 amintesc de felul în care îi priveam pe evrei în anul 1935. Ne
 însuşiserăm ideea că erau profund diferiţi de noi: fie putred de bogaţi,
-precum fraţii Braunstein, care deţineau <location type=”historical building” latitude=47.165413 longitude=27.580620 author="Lionel Duroy" title="Eugenia"> palatul cu acelaşi nume din 
+precum fraţii Braunstein, care deţineau <location type=”historical building” latitude=47.165413 longitude=27.580620 entity_name="Palatul Braunstein" author="Lionel Duroy" title="Eugenia"> palatul cu acelaşi nume din 
 centrul oraşului,</location> sau ca familia Neuschotz, care făcea comerţ 
 în lumea întreagă; fie sărăci lipiţi pământului, precum cei care supravieţuiau în
 mahalale -  <location type=”neighborhood” latitude=47.211130 
-longitude=27.014280 author="Lionel Duroy" title="Eugenia">Târgu Cucu,</location> <location type=”neighborhood” latitude=47.145650 longitude=27.582730 author="Lionel Duroy" title="Eugenia"> Nicolina</location> sau <location type=”neighborhood” latitude=47.170587 longitude=27.574852 author="Lionel Duroy" title="Eugenia">Păcurari
+longitude=27.014280 entity_name="Târgu Cucu" author="Lionel Duroy" title="Eugenia">Târgu Cucu,</location> <location type=”neighborhood” latitude=47.145650 longitude=27.582730 entity_name="Nicolina" author="Lionel Duroy" title="Eugenia"> Nicolina</location> sau <location type=”neighborhood” latitude=47.170587 longitude=27.574852 entity_name="Păcurari" author="Lionel Duroy" title="Eugenia">Păcurari
 </location>. Nu ne-ar fi trecut niciodată prin minte, de exemplu, să ieşim 
-la plimbare pe străduţele întortocheate din <location type=”neighborhood” latitude=47.211130 longitude=27.014280 author="Lionel Duroy" title="Eugenia">Târgu Cucu,</location>
+la plimbare pe străduţele întortocheate din <location type=”neighborhood” latitude=47.211130 longitude=27.014280 entity_name="Târgu Cucu" author="Lionel Duroy" title="Eugenia">Târgu Cucu,</location>
  unde se înghesuiau sute de familii evreiesti, adăpostite în cocioabe
  prăpădite din cărămidă sau chirpici,unde părinţi, copii şi animale 
 dormeau în aceeaşi încăpere pentru a-şi ţine de cald. 
@@ -420,8 +420,8 @@ fel de gelozie căreia nu-i prea dădeam glas, totuşi, pentru că, în fond,
 eram mulţumiţi că domnul Finchelstein ne-a putut repara ceasul, sau
 că domnul Caufman, farmacistul, se pricepea să ne uşureze durerile de
 stomac cu preparatele lui. Părinţii noştri, care aveau Vii în dealul
-<location type=”neighborhood” latitude=47.177275 longitude=27.573324 author="Lionel Duroy" title="Eugenia"> 
-Copoului </location> şi ţineau o prăvălie de Vinuri pe <location type=”street” latitude=47.10028 longitude=27.34438 author="Lionel Duroy" title="Eugenia"> strada Lăpuşneanu,</location> 
+<location type=”neighborhood” latitude=47.177275 longitude=27.573324 entity_name="Copou" author="Lionel Duroy" title="Eugenia"> 
+Copoului </location> şi ţineau o prăvălie de Vinuri pe <location type=”street” latitude=47.10028 longitude=27.34438 entity_name="Strada Alexandru Lăpușneanu" author="Lionel Duroy" title="Eugenia"> strada Lăpuşneanu,</location> 
 unadintre cele mai elegante din Iaşi, erau şi ei încurcaţi când era vorba
 despre evrei. Considerau că erau prea mulţi, că succesul unora dintre
 ei era deşănţat, că sărăcia şi mizeria altora erau o ameninţare pentru
@@ -467,7 +467,7 @@ Naţional-Creştine, la care tânărul Codreanu aderase de îndată. În
 primăvara anului 1923 (fratele nostru Ştefan nu avea atunci decât vreo
 zece ani), Cuza şi Codreanu lansaseră o primă campanie împotriva
 naturalizării evreilor şi a prezenţei lor masive în toate disciplinele la
-<location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia">
+<location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia">
 Universitatea din Iaşi.</location> Discursurile lor alimentaseră cu iuţeală
 ranchiunele şi, în doar câteva săptămâni, studenţii creştini se
 ridicaseră împotriva „jidanilor“. Sfârşitul anului universitar fusese
@@ -476,7 +476,7 @@ geam, foarte mulţi bătuţi, uneori până la pierderea cunoştinţei, pe
 holurile căminelor, actele lor de identitate fuseseră arse, cărţile
 aruncate pe fereastră.
 După aceea, profesorul Cuza ceruse ca un numerus clausus să le
-fie impus evreilor. În acord cu această propunere, colegul său de la <location type=”institution” latitude=47.169697 longitude=27.585170 author="Lionel Duroy" title="Eugenia">Facultatea de 
+fie impus evreilor. În acord cu această propunere, colegul său de la <location type=”institution” latitude=47.169697 longitude=27.585170 entity_name="Universitatea de Medicină din Iași" author="Lionel Duroy" title="Eugenia">Facultatea de 
 Medicină,</location> decanul 
 Constantin Bacaloglu, mersese şi mai
 departe şi decretase că, de atunci înainte, nici un student evreu nu mai
@@ -485,7 +485,7 @@ putea diseca un cadavru de creştin. Studenţii evrei nu aveau decât să-
 care ne povestea aceste isprăvi (ce ni se păreau legitime), considera că
 tocmai această chestiunea a disecţiilor fusese decisivă pentru Viitorul
 lui, „golind“ pur şi simplu <location type=”institution” latitude=47.169697
- longitude=27.585170 author="Lionel Duroy" title="Eugenia">Facultatea de Medicină </location> de studenţii evrei.
+ longitude=27.585170 entity_name="Universitatea de Medicină din Iași" author="Lionel Duroy" title="Eugenia">Facultatea de Medicină </location> de studenţii evrei.
 
 Însă regele a fost tulburat de violenţele de la Iaşi, iar poliţia, care
 nu intervenise pentru a-i separa pe beligeranţi, a arestat până la urmă
@@ -700,7 +700,7 @@ ceea ce simţea şi de aceea, cred, era atât de iubită de studenţi, deşi
 persiflată de băieţi. „Domnul Sebastian, a reluat ea încet, meditează
 asupra suferinţei evreilor şi asupra motivelor animozităţii pe care
 aceştia o trezesc în Celălalt - adică în cei care nu sunt evrei. Mă
-gândesc 1a evenimentele violente care presară viaţa <location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia">
+gândesc la evenimentele violente care presară viaţa <location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia">
  Universităţii </location> noastre, chiar aici, la Iaşi, de ani de zile, 
 dar şi la ce s-a petrecut de curând la Berlin, unde unii comercianţi
  evrei au fost loviţi şi şi-au văzut magazinele devastate“
@@ -895,7 +895,7 @@ asupra unei minciuni învăţate încă din copilărie, anume că evreii erau
 nişte altfel de fiinţe, a căror viaţă nu avea acelaşi preţ cu a noastră.
 Altfel, ştiind că mortalitatea infantilă era mult mai ridicată în căsuţele
 din <location type=”neighborhood” latitude=47.211130 
-longitude=27.014280 author="Lionel Duroy" title="Eugenia">Târgu Cucu</location> decât în cartierele frumoase din 
+longitude=27.014280 entity_name="Târgu Cucu" author="Lionel Duroy" title="Eugenia">Târgu Cucu</location> decât în cartierele frumoase din 
 Iaşi, am mai fi pututsă dormim liniştiţi? Altfel, trecând prin faţa vreunui student
  Evreu abandonat într-o baltă de sânge pe trotuar, ne-am mai fi grăbit să
 privim în altă parte?
@@ -1002,7 +1002,7 @@ Apoi, văzând că îi urmam, s-a întors spre mine:
 domnului Sebastian, dacă vrei. A, şi adu-mi şi mie lucrurile, paltonul
 şi geanta, da?
 
-O clipă mai târziu, îi regăseam în holul mare al <location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia">
+O clipă mai târziu, îi regăseam în holul mare al <location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia">
  Universităţii </location>. El îşi tampona uşor buzele cu batista, iar sângele
  care îi curgea din păr fusese şters. Doamna Costinaş l-a ajutat să-şi pună
  paltonul, apoi şi l-a îmbrăcat şi ea şi am ieşit în stradă toţi trei.
@@ -1044,7 +1044,7 @@ ridicoli am fi dacă am protesta împotriva ploii de câte ori ne udă. Ei
 bine, credeţi-mă, ceea ce s-a întâmplat în această dimineaţă nu
 reprezintă mai mult decât o aversă.
 
-În clipa aceea, un nou val de studenţi s-a revărsat din <location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia"> Universitate </location>într-o hărmălaie de strigăte şi râsete, ciocnindu-se  în trecere de noi,
+În clipa aceea, un nou val de studenţi s-a revărsat din <location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia"> Universitate </location>într-o hărmălaie de strigăte şi râsete, ciocnindu-se  în trecere de noi,
 luând cu asalt cele două tramvaie care opriseră în staţie şi scutindu-mă
 de un răspuns. Trebuie să fi fost miezul zilei, cursurile nu aveau să
 reînceapă înainte de ora paisprezece. Era momentul zilei pe care îl
@@ -1117,9 +1117,9 @@ ajunseserăm deja şi şoferul coborâse să ne deschidă.
 
 Locuia pe una dintre străduţele acelea înguste, în pantă, mai sus de
 <location type=”institution” latitude=47.168794
- longitude=27.582644 author="Lionel Duroy" title="Eugenia"> Spitalul Sf. Spiridon </location>, foarte aproape 
+ longitude=27.582644 entity_name="Spitalul Sfântul Spiridon" author="Lionel Duroy" title="Eugenia"> Spitalul Sf. Spiridon </location>, foarte aproape 
 de <location type=”historical building” latitude=47.175310
- longitude= 27.582853 author="Lionel Duroy" title="Eugenia"> bojdeuca  scriitorului meu de
+ longitude= 27.582853 entity_name="Bojdeuca scriitorului Ion Creangă" author="Lionel Duroy" title="Eugenia"> bojdeuca  scriitorului meu de
 suflet, Ion Creangă,</location> în faţa căreia veneam uneori să mă aşez.
 
 Nu m-am putut împiedica să nu-i spun.
@@ -1269,7 +1269,7 @@ nu vei lipsi de la cursuri.
 Făcuse propunerea cu atâta naturaleţe şi drăgălăşenie, încât m-am
 pomenit acceptând, de parcă nu era mai mult decât o invitaţie la o
 prăjitură la <location type=”historical building” latitude=47.168553
- longitude=27.577790 author="Lionel Duroy" title="Eugenia">Tufli,</location> delicioasa cofetărie a Jockey Clubului.
+ longitude=27.577790 entity_name="Cofetăria Tuffli" author="Lionel Duroy" title="Eugenia">Tufli,</location> delicioasa cofetărie a Jockey Clubului.
 
 - Eugenia, ce mult mă bucur că te-am cunoscut! a conchis ea. Şi
 acum, la gară, Mihail, trenul dumitale pleacă peste o oră.
@@ -1289,7 +1289,7 @@ ideea.
 cu Mihail, din luna martie 1935, în maşina care ne ducea la gară.
 
 - Nu am înţeles ce mi-aţi spus de dimineaţă pe trotuar, în faţa
-<location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia">
+<location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia">
  Universităţii </location>. Nu Vă pasă dacă sunteţi bătut?
 
 - Aş prefera să nu fiu.
@@ -1634,12 +1634,12 @@ iluminat.
 fără mine. Poftă bună!
 
 Spunând acestea, am coborât în fugă scările şi am ieşit din casă.
-<location type=”street” latitude=47.10028 longitude=27.34438 author="Lionel Duroy" title="Eugenia"> Strada Lăpuşneanu</location> era liniştită la ora aceea, cu toate prăvăliile
+<location type=”street” latitude=47.10028 longitude=27.34438 entity_name="Strada Alexandru Lăpușneanu" author="Lionel Duroy" title="Eugenia"> Strada Lăpuşneanu</location> era liniştită la ora aceea, cu toate prăvăliile
 închise, dar frumos luminate. Am luat-o în sus până la Jockey Club,
 cu inima bătându-mi puternic în piept. Apoi, prea tulburată ca să ştiu
 bine ce fac, am mers pe <location type=”street” latitude=47.175495
- longitude=27.571748 author="Lionel Duroy" title="Eugenia">  bulevardul Carol</location> spre <location type=”neighborhood” latitude=47.177275 longitude=27.573324 author="Lionel Duroy" title="Eugenia"> dealul Copoului </location>. Şi
-abia ajungând în faţa <location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia">
+ longitude=27.571748 entity_name="Bulevardul Carol I" author="Lionel Duroy" title="Eugenia">  bulevardul Carol</location> spre <location type=”neighborhood” latitude=47.177275 longitude=27.573324 entity_name="Copou" author="Lionel Duroy" title="Eugenia"> dealul Copoului </location>. Şi
+abia ajungând în faţa <location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia">
  Universităţii </location> şi amintindu-mi-o pe doamna
 Costinaş chemând un taxi am înţeles ce mă adusese acolo: dorinţa de
 o revedea, de a-i povesti totul şi de a citi încă o dată în privirea ei
@@ -1659,7 +1659,7 @@ aşteptarea acelei călătorii la Bucureşti, împreună cu doamna Costinaş
 
 Intrând în salonul de ceai de la Hotelul Capşa, atenţia mi-a fost mai
 întâi atrasă de Leni. Era deja foarte cunoscută, apărea des pe afişul
-<location type=”institution” latitude=47.163406 longitude=27.585030 author="Lionel Duroy" title="Eugenia">
+<location type=”institution” latitude=47.163406 longitude=27.585030 entity_name="Teatrul Național Iași" author="Lionel Duroy" title="Eugenia">
  Teatrului Naţional din Iaşi, </location>
  unde o văzusem jucând în Livada de vişini
 a lui Cehov.
@@ -2510,7 +2510,7 @@ spune-i că nu voi pleca.
 
 Trecuserăm de Palatul Regal şi de Athénée Palace, aflat în faţă, iar
 acum o luam la stânga pe <location type=”street” latitude=47.173887
- longitude=27.575310 author="Lionel Duroy" title="Eugenia"> strada General Berthelot</location> strada General Berthelot.
+ longitude=27.575310 entity_name="Strada General Berthelot" author="Lionel Duroy" title="Eugenia"> strada General Berthelot</location> strada General Berthelot.
 
 - Aici e.
 
@@ -2891,7 +2891,7 @@ Nu a răspuns, dar, după o clipă, şi-a strecurat braţul pe sub al meu.
 
 - Haideţi să bem ceva înainte să închidă parcul, ce ziceţi?
 
-Am comandat două pahare de Vin alb de <location type=”neighborhood” latitude=47.177275 longitude=27.573324 author="Lionel Duroy" title="Eugenia"> Copou </location>, acel vin sec şi
+Am comandat două pahare de Vin alb de <location type=”neighborhood” latitude=47.177275 longitude=27.573324 entity_name="Copou" author="Lionel Duroy" title="Eugenia"> Copou </location>, acel vin sec şi
 parfumat pe care îl producea tatăl meu, şi am aprins o ţigară.
 
 - Leni Caler pare să ţină foarte mult la dumneavoastră, nu-i aşa?
@@ -2979,7 +2979,7 @@ Cuvintele îmi ţâşniseră, ca şi cum stăteau pregătite de multă
 vreme. Ce o fi crezut? Din discreţie, fără îndoială, nu a întrebat nimic.
 
 - Parcă te văd la Iaşi, a reluat el o clipă mai târziu, când aşteptam
-un taxi în faţa <location type=”institution” latitude=47.174144 longitude=27.572106 author="Lionel Duroy" title="Eugenia">
+un taxi în faţa <location type=”institution” latitude=47.174144 longitude=27.572106 entity_name="Universitatea Alexandru Ioan Cuza din Iași" author="Lionel Duroy" title="Eugenia">
  Universităţii, </location> iar eu încercam cu stângăcie să fac figură
 bună, în ciuda loviturilor primite. Căutam ce să-ţi spun ca să te fac să
 râzi, păreai îngrozită.
@@ -3104,12 +3104,12 @@ masă (ştiam că Ştefan avea să lipsească, nu mai trebuia să precizeze),
 îmi regăseam casa cu plăcere. Era reconfortant să-i aud depănând
 aceleaşi frământări mărunte pe care le auzeam de la şapte ani, Vârsta
 la care începi deodată să înţelegi ce discută părinţii. Căzuse grindina
-în <location type=”neighborhood” latitude=47.177275 longitude=27.573324 author="Lionel Duroy" title="Eugenia"> 
+în <location type=”neighborhood” latitude=47.177275 longitude=27.573324 entity_name="Copou" author="Lionel Duroy" title="Eugenia"> 
 Copou </location> şi stricase mult din Vie (dar când nu era grindina, era
 Crivăţul care o strica). O nouă prăvălie de Vinuri şi spirtoase era pe
 punctul de a se deschide pe <location type=”street” latitude=47.162554 
-longitude=27.582693 author="Lionel Duroy" title="Eugenia">  bulevardul Ştefan cel Mare</location>, dacă nu
-cumva era pe <location type=”street” latitude=47.164352 longitude= 27.585285 author="Lionel Duroy" title="Eugenia"> strada Cuza- Vodă</location> (dar în fiecare an, de la prima mea
+longitude=27.582693 entity_name="Bulevardul Ștefan cel Mare" author="Lionel Duroy" title="Eugenia">  bulevardul Ştefan cel Mare</location>, dacă nu
+cumva era pe <location type=”street” latitude=47.164352 longitude= 27.585285 entity_name="Strada Cuza-Vodă" author="Lionel Duroy" title="Eugenia"> strada Cuza- Vodă</location> (dar în fiecare an, de la prima mea
 coardă de sărit, ne temeam de acest concurent, care până la urmă nu
 mai deschidea). Să văruim oare faţada la vară, sau să încercăm să mai
 rezistăm un an, din motive de economie? (Când Carmen voia să
@@ -3490,7 +3490,7 @@ dacă poliţia afla. Asculta de un colonel din serviciul de informaţii
 sovietic, „ofiţerul de caz“, cu care avea o legătură. Fostul ei soţ, Ilis,
 era deja tatăl unei fetiţe de câteva luni, făcută cu o infirmiera de la
 <location type=”institution” latitude=47.168794
- longitude=27.582644 author="Lionel Duroy" title="Eugenia"> Spitalul Sf. Spiridon </location>, unde lucra.
+ longitude=27.582644 entity_name="Spitalul Sfântul Spiridon" author="Lionel Duroy" title="Eugenia"> Spitalul Sf. Spiridon </location>, unde lucra.
  Irina îmi dezvăluise că nu putea avea
 copii, ceea ce nu era grav în situaţia ei actuală, căci noul bărbat al
 vieţii sale - de care părea serios îndrăgostită - avea deja trei. Să devin
@@ -3502,7 +3502,7 @@ să-mi păstrez libertatea de a spune cu voce tare ce gândeam, la fel ca
 scriitorii care mă învăţaseră totul despre viaţă. Şi atunci, să scriu? Dar
 ce să scriu? Urma să împlinesc douăzeci şi doi de ani şi nu trăisem
 nimic, crescută cu ocrotire într-o familie de mici comercianţi, care nu
-vedeau mai departe de capătul <location type=”street” latitude=47.10028 longitude=27.34438 author="Lionel Duroy" title="Eugenia"> străzii Lăpuşneanu,</location> .
+vedeau mai departe de capătul <location type=”street” latitude=47.10028 longitude=27.34438 entity_name="Strada Alexandru Lăpușneanu" author="Lionel Duroy" title="Eugenia"> străzii Lăpuşneanu,</location> .
 
 Acasă la mama şi la tata, de altfel, principalul subiect era, mai mult
 ca oricând, Ştefan. Coborau vocea de câte ori era vorba despre el,
@@ -4825,7 +4825,7 @@ tot bine mersi la Berlin, unde se povestea că Horia Sima şi apropiaţii
 săi beneficiau de un hotel de lux pus la dispoziţia lor de Hitler?S
 Ezitam între furie şi tristeţe, amânând clipa în care aveam să-i sun pe
 părinţii mei la Iaşi. Ce durere ar fi trăit dacă Ştefan ar fi fost împuşcat
-pe <location type=”street” latitude=47.10028 longitude=27.34438 author="Lionel Duroy" title="Eugenia"> strada Lăpuşneanu,</location> în faţa casei noastre, pe trotuarul nostru. Ce
+pe <location type=”street” latitude=47.10028 longitude=27.34438 entity_name="Strada Alexandru Lăpușneanu" author="Lionel Duroy" title="Eugenia"> strada Lăpuşneanu,</location> în faţa casei noastre, pe trotuarul nostru. Ce
 durere inconsolabilă. Dar, în acelaşi timp, cunoscându-l pe Ştefan, nu
 credeam că acest lucru era posibil. Era foarte calculat - când
 legionarii veniseră să-l bată pe Mihail la Universitate, în timpul

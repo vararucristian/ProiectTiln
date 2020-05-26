@@ -45,11 +45,11 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private double latitude;
     private double longitude;
     private static final String PLATFORM_CHANNEL = "speechDataChannel";
-    private String SpeechText = "Ce mai faci tu Ana?";
+    private String SpeechText = "";
     private Marker locationMarker;
-    private String textTitle = "Eugenia";
-    private String textAuthor = "Lionel Duroy";
-    private String textLocation = "Targu Cucu";
+    private String textTitle = "-";
+    private String textAuthor = "-";
+    private String textLocation = "-";
 
 
     @Override
@@ -129,6 +129,19 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private String getTextTitle() {
         return textTitle;
     }
+
+    public void setTextTitle(String textTitle) {
+        this.textTitle = textTitle;
+    }
+
+    public void setTextAuthor(String textAuthor) {
+        this.textAuthor = textAuthor;
+    }
+
+    public void setTextLocation(String textLocation) {
+        this.textLocation = textLocation;
+    }
+
 
     private void updateSpeachText(){
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.INTERNET)

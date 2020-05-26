@@ -59,6 +59,12 @@ class MyApp extends StatelessWidget{
 
 
     return Container(
+      decoration: BoxDecoration(
+        image: DecorationImage(
+          image: AssetImage("assets/images/geo.jpg"),
+          fit:BoxFit.cover,
+        )
+      ),
         child: Center(
             child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -71,10 +77,32 @@ class MyApp extends StatelessWidget{
                             builder: (context, AsyncSnapshot<String> snapshot) {
                               if (snapshot.hasData) {
                                 return Text(
-                                  'Titlu:' +snapshot.data,
+                                  'Titlu:',
                                   textAlign: TextAlign.center,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 25, color: Colors.blueGrey[50]),
+                                );
+                              } else {
+                                return CircularProgressIndicator();
+                              }
+
+                            }
+                        ),
+
+                      )
+                  ),
+                  Container(
+                      child:Center(
+                        child:FutureBuilder<String>(
+                            future: getTextTitleData(),
+                            builder: (context, AsyncSnapshot<String> snapshot) {
+                              if (snapshot.hasData) {
+                                return Text(
+                                  snapshot.data,
+                                  maxLines: 4,
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 25, color: Colors.blueGrey[50]),
                                 );
                               } else {
                                 return CircularProgressIndicator();
@@ -92,10 +120,32 @@ class MyApp extends StatelessWidget{
                             builder: (context, AsyncSnapshot<String> snapshot) {
                               if (snapshot.hasData) {
                                 return Text(
-                                  'Autor:' +snapshot.data,
+                                  'Autor:',
                                   textAlign: TextAlign.center,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 25,  color: Colors.blueGrey[50]),
+                                );
+                              } else {
+                                return CircularProgressIndicator();
+                              }
+
+                            }
+                        ),
+
+                      )
+                  ),
+                  Container(
+                      child:Center(
+                        child:FutureBuilder<String>(
+                            future: getTextAuthorData(),
+                            builder: (context, AsyncSnapshot<String> snapshot) {
+                              if (snapshot.hasData) {
+                                return Text(
+                                  snapshot.data,
+                                  maxLines: 4,
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 25,  color: Colors.blueGrey[50]),
                                 );
                               } else {
                                 return CircularProgressIndicator();
@@ -113,10 +163,32 @@ class MyApp extends StatelessWidget{
                             builder: (context, AsyncSnapshot<String> snapshot) {
                               if (snapshot.hasData) {
                                 return Text(
-                                  'Locatie:' +snapshot.data,
+                                  'Locatie:',
                                   textAlign: TextAlign.center,
                                   overflow: TextOverflow.ellipsis,
-                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 35),
+                                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 25,  color: Colors.blueGrey[50]),
+                                );
+                              } else {
+                                return CircularProgressIndicator();
+                              }
+
+                            }
+                        ),
+
+                      )
+                  ),
+                  Container(
+                      child:Center(
+                        child:FutureBuilder<String>(
+                            future: getTextLocationData(),
+                            builder: (context, AsyncSnapshot<String> snapshot) {
+                              if (snapshot.hasData) {
+                                return Text(
+                                  snapshot.data,
+                                  maxLines: 4,
+                                  textAlign: TextAlign.center,
+                                  overflow: TextOverflow.ellipsis,
+                                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 25,  color: Colors.blueGrey[50]),
                                 );
                               } else {
                                 return CircularProgressIndicator();
@@ -128,7 +200,7 @@ class MyApp extends StatelessWidget{
                       )
                   ),
                   FlatButton(
-                    color: Colors.blue,
+                    color: Colors.purple[300],
                     textColor: Colors.white,
                     disabledColor: Colors.grey,
                     disabledTextColor: Colors.black,

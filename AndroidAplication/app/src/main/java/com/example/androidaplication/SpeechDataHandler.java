@@ -3,6 +3,9 @@ package com.example.androidaplication;
 import android.os.AsyncTask;
 import android.util.Log;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -31,8 +34,21 @@ public class SpeechDataHandler extends AsyncTask<MapsActivity, Void, String> {
         } catch (IOException e) {
             Log.e("my_http",e.toString());
         }
-        activity[0].setSpeechText(content.toString());
-        Log.i("toSpeech",content.toString());
+        Log.i("jsonObject",content.toString());
+        try {
+            JSONObject jsonObject = new JSONObject(content.toString());
+            String text = jsonObject.getString("quote");
+            String author = jsonObject.getString("author");
+            String title = jsonObject.getString("title");
+            String location = jsonObject.getString("place");
+            activity[0].setSpeechText(text);
+            activity[0].setTextAuthor(author);
+            activity[0].setTextLocation(location);
+            activity[0].setTextTitle(title);
+            Log.i("toSpeech",text);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         return content.toString();
     }

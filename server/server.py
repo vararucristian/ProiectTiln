@@ -10,13 +10,14 @@ data= open("../Eugenia.txt", encoding="utf8")
 text=data.read()
 
 
-def  get_possible_coordinates():
+def get_possible_coordinates():
     coordinates=list()
     coordinates_expressions=re.findall('latitude=[0-9\.\s]*[^\>]*longitude=[0-9\.\s]*', text)
     for coordinate in coordinates_expressions:
         x=re.findall("[0-9\.]+", coordinate)
         coordinates.append(tuple(float(i) for i in x))
     return coordinates
+
 
 coordinates = get_possible_coordinates()
 
@@ -44,7 +45,6 @@ def find_quote_by_name(name):
     return result
 
 
-
 def find_quote_by_location(lat, long):
     tag= '\<location[^\>]*latitude[\s]*=[\s]*'+str(lat)+"[0]*[^\>]*longitude[\s]*=[\s]*"+str(long)+'[0]*[^\>]*\>[^\<]*\</location\>'
     name =  re.findall(tag, text)[0]
@@ -56,7 +56,7 @@ def find_quote_by_location(lat, long):
     else:
         return "Nu s-a returnat nici un citat."
 
-#functe care calculeaza distanta in km
+
 def get_distance(lat1, lon1, lat2, lon2):
     if lat1 == lat2 and lon1 == lon2:
         return 0
